@@ -1,14 +1,18 @@
 package com.example.ejercicioadicionalrepasoexamen.Modelos;
 
-public class Partido {
+import java.io.Serializable;
+
+public class Partido implements Serializable {
     String result;
     String equipo1;
     String equipo2;
+    String comentario;
 
-    public Partido(String result, String equipo1, String equipo2) {
+    public Partido(String result, String equipo1, String equipo2, String comentario) {
         this.result = result;
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
+        this.comentario = comentario;
     }
 
     public String getResult() {
@@ -33,5 +37,13 @@ public class Partido {
 
     public void setEquipo2(String equipo2) {
         this.equipo2 = equipo2;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
     }
 }
