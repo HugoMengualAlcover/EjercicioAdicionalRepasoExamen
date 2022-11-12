@@ -42,11 +42,10 @@ public class PartidoAddActivity extends AppCompatActivity {
     }
 
     private Partido crearPartido() {
-        if(binding.spnEquipo1AddPartido.getSelectedItemPosition() !=0 ||
-                binding.spnEquipo1AddPartido.getSelectedItemPosition()!=0 ||
-                !binding.txtResultadoAddPartido.getText().toString().isEmpty() ||
-                !binding.txtComentariosAddPartido.getText().toString().isEmpty()
-        ){
+        if(binding.spnEquipo1AddPartido.getSelectedItemPosition() !=0 &&
+                binding.spnEquipo1AddPartido.getSelectedItemPosition()!=0 &&
+                !binding.txtResultadoAddPartido.getText().toString().isEmpty() &&
+                !binding.txtComentariosAddPartido.getText().toString().isEmpty()){
             return  new Partido(binding.txtResultadoAddPartido.getText().toString(),
                     binding.spnEquipo1AddPartido.getSelectedItem().toString(),
                     binding.spnEquipo2AddPartido.getSelectedItem().toString(),
